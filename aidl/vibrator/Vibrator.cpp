@@ -484,8 +484,8 @@ int LedVibratorDevice::on(int32_t timeoutMs) {
     int index = (timeoutMs < 81) ? 0 : (timeoutMs < 91) ? 1 :
                 (timeoutMs < 101) ? 2 : 3;
     int gain = 4 + 1.24*timeoutMs;
-    if (gain > 119) {
-        gain = 119;             // 0x77
+    if (gain > 72) {
+        gain = 72;             // 0x48
     }
     ALOGD("QTI Vibrator on for %d ms with a gain of 0x%x", timeoutMs, gain);
     for (const auto &[path, value] : VIBRATOR_CONSTANTS[index]) {
