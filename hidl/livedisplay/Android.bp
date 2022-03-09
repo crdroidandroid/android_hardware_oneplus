@@ -12,16 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-filegroup {
-    name: "vendor.lineage.livedisplay@2.1-oneplus-af",
-    srcs: ["AntiFlicker.cpp"],
-}
-
-filegroup {
-    name: "vendor.lineage.livedisplay@2.1-oneplus-se",
-    srcs: ["SunlightEnhancement.cpp"],
-}
-
 cc_library_headers {
     name: "vendor.lineage.livedisplay@2.1-oneplus-headers",
     vendor_available: true,
@@ -37,8 +27,6 @@ cc_binary {
     srcs: [
         ":vendor.lineage.livedisplay@2.0-sdm-pa",
         ":vendor.lineage.livedisplay@2.0-sdm-utils",
-        ":vendor.lineage.livedisplay@2.1-oneplus-af",
-        ":vendor.lineage.livedisplay@2.1-oneplus-se",
         "service.cpp",
     ],
     shared_libs: [
