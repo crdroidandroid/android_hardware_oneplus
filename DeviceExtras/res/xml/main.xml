@@ -181,6 +181,7 @@
             android:title="@string/game_mode_title" />
 
         <Preference
+            android:key="game_mode_warning"
             android:icon="@drawable/ic_info_outline"
             android:summary="@string/game_mode_warning"
             android:persistent="false" />
