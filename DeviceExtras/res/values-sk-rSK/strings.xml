@@ -99,30 +99,6 @@
     <string name="fps_info_position_bottom_center">Dolu v strede</string>
     <string name="fps_info_position_bottom_right">Vpravo dolu</string>
     <string name="fps_info_text_size_title">Veľkosť textu</string>
-    <!-- Doze -->
-    <string name="ambient_enable">Použiť ambientný displej</string>
-    <string name="ambient_display_title">Ambientny displej</string>
-    <string name="ambient_display_enable_title">Ambientny displej</string>
-    <string name="ambient_display_enable_summary">Prebudiť obrazovku po prijatí upozornenia</string>
-    <string name="ambient_display_gestures_title">Gestá ambientneho displeja</string>
-    <string name="ambient_display_gestures_summary">Ďalšie gestá na prebudenie obrazovky</string>
-    <string name="ambient_display_summary">Prebudiť obrazovku po prijatí upozornenia</string>
-    <string name="ambient_display_always_on_title">Vždy zapnutá</string>
-    <string name="dialog_ok">OK</string>
-    <string name="disabled">Vypnuté</string>
-    <string name="doze_panel_title">Uspať</string>
-    <string name="doze_settings_help_text">Tieto funkcie používajú udalosti senzorov pre spustenie upozorňovania blikaním. Vybraný senzor je zapnutý iba v prípade prijatia upozornenia, čo vedie k úspore batérie. Je tu aj možnosť zapnúť daný senzor ihneď po vypnutí obrazovky, ale dochádza k vyššej spotrebe batérie.</string>
-    <string name="doze_settings_help_title">Pomoc</string>
-    <string name="pickup_sensor_title">Senzor zdvihnutia</string>
-    <string name="pick_up_gesture_title">Zdvihnutie</string>
-    <string name="pick_up_gesture_summary">Zablikať pri zdvihnutí</string>
-    <string name="pick_up_wake_gesture_summary">Prebudiť zariadenie po zodvihnutí</string>
-    <string name="pocket_gesture_title">Vrecko</string>
-    <string name="pocket_gesture_summary">Upozorniť blikaním po vybratí z vrecka</string>
-    <string name="proximity_sensor_title">Senzor priblíženia</string>
-    <string name="ambient_display_always_on_summary">Zobrazovať čas, ikony oznámení a ďalšie informácie. Zvyšuje využitie batérie.</string>
-    <string name="switch_bar_off">Vypnúť</string>
-    <string name="switch_bar_on">Zapnúť</string>
     <!-- Power -->
     <string name="category_power">Napájanie</string>
     <string name="powershare_mode_title">Bezdrôtové nabíjanie PowerShare</string>
