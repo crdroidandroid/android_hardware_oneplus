@@ -88,30 +88,6 @@
     <string name="fps_info_position_bottom_center">Κάτω κέντρο</string>
     <string name="fps_info_position_bottom_right">Κάτω δεξιά</string>
     <string name="fps_info_text_size_title">Μέγεθος κειμένου</string>
-    <!-- Doze -->
-    <string name="ambient_enable">Χρήση οθόνης περιβάλλοντος</string>
-    <string name="ambient_display_title">Οθόνη περιβάλλοντος</string>
-    <string name="ambient_display_enable_title">Οθόνη περιβάλλοντος</string>
-    <string name="ambient_display_enable_summary">Ενεργοποίηση της οθόνης όταν λαμβάνετε ειδοποιήσεις</string>
-    <string name="ambient_display_gestures_title">Χειρονομίες οθόνης περιβάλλοντος</string>
-    <string name="ambient_display_gestures_summary">Πρόσθετες χειρονομίες για αφύπνιση της οθόνης</string>
-    <string name="ambient_display_summary">Αφύπνιση της οθόνης όταν λαμβάνετε ειδοποιήσεις</string>
-    <string name="ambient_display_always_on_title">Πάντα ενεργή</string>
-    <string name="dialog_ok">OK</string>
-    <string name="disabled">Απενεργοποιημένη</string>
-    <string name="doze_panel_title">Doze</string>
-    <string name="doze_settings_help_text">Αυτά τα χαρακτηριστικά χρησιμοποιούν τον αισθητήρα για να εκκινήσουν έναν παλμό ειδοποίησης. Ο επιλεγμένος αισθητήρας είναι ενεργοποιημένος μόνο όταν η συσκευή λαμβάνει ειδοποίηση, αυτό βοηθά στη μείωση της χρήσης μπαταρίας. Υπάρχει επίσης μια επιλογή για την ενεργοποίηση του επιλεγμένου αισθητήρα μόλις απενεργοποιηθεί η οθόνη, αυτό θα προκαλέσει μεγαλύτερη χρήση μπαταρίας.</string>
-    <string name="doze_settings_help_title">Βοήθεια</string>
-    <string name="pickup_sensor_title">Αισθητήρας σηκώματος</string>
-    <string name="pick_up_gesture_title">Σήκωμα συσκευής</string>
-    <string name="pick_up_gesture_summary">Παλμός ειδοποιήσεων κατά το σήκωμα της συσκευής</string>
-    <string name="pick_up_wake_gesture_summary">Αφύπνιση της συσκευής κατά το σήκωμα</string>
-    <string name="pocket_gesture_title">Τσέπη</string>
-    <string name="pocket_gesture_summary">Παλμός ειδοποιήσεων κατά την έξοδο από την τσέπη</string>
-    <string name="proximity_sensor_title">Αισθητήρας εγγύτητας</string>
-    <string name="ambient_display_always_on_summary">Εμφάνιση ώρας, εικονιδίων ειδοποίησης και άλλων πληροφοριών. Αυξημένη χρήση μπαταρίας.</string>
-    <string name="switch_bar_off">Απενεργοποιημένο</string>
-    <string name="switch_bar_on">Ενεργοποιημένο</string>
     <!-- Speaker & Microphone -->
     <string name="category_speaker">Ηχείο &amp; Μικρόφωνο</string>
     <string name="ear_gain_title">Ενίσχυση ακουστικού (κλήσεις)</string>
