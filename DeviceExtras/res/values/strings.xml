@@ -21,7 +21,7 @@
     <string name="device_extras_warning_title">Warning</string>
     <string name="device_extras_warning_text">A majority of these features rely on specific kernel nodes in order to function. By flashing a custom kernel, you risk the possibility of losing access to some features. You have been warned!</string>
     <string name="device_extras_dialog">OK</string>
-	
+
     <!-- Alert slider -->
     <string name="notification_slider_category_title">Alert slider</string>
     <string name="notification_slider_title">Alert slider settings</string>
@@ -128,31 +128,6 @@
     <string name="fps_info_position_center_right">Center right</string>
     <string name="fps_info_text_size_title">Text size</string>
 
-    <!-- Doze -->
-    <string name="ambient_enable">Use ambient display</string>
-    <string name="ambient_display_title">Ambient display</string>
-    <string name="ambient_display_enable_title">Ambient display</string>
-    <string name="ambient_display_enable_summary">Wake screen when you receive notifications</string>
-    <string name="ambient_display_gestures_title">Ambient display gestures</string>
-    <string name="ambient_display_gestures_summary">Additional gestures to wake the screen</string>
-    <string name="ambient_display_summary">Wake screen when you receive notifications</string>
-    <string name="ambient_display_always_on_title">Always on</string>
-    <string name="dialog_ok">OK</string>
-    <string name="disabled">Disabled</string>
-    <string name="doze_panel_title">Doze</string>
-    <string name="doze_settings_help_text">These features use sensor events to launch a doze notification pulse. The chosen sensor is only enabled when the device receives a notification, this helps to reduce battery usage. There is also an option to enable the chosen sensor as soon as the screen turns off, this will cause higher battery usage.</string>
-    <string name="doze_settings_help_title">Help</string>
-    <string name="pickup_sensor_title">Pickup sensor</string>
-    <string name="pick_up_gesture_title">Pick-up</string>
-    <string name="pick_up_gesture_summary">Pulse notifications on pick-up</string>
-    <string name="pick_up_wake_gesture_summary">Wake device on pick-up</string>
-    <string name="pocket_gesture_title">Pocket</string>
-    <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
-    <string name="proximity_sensor_title">Proximity sensor</string>
-    <string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
-    <string name="switch_bar_off">Off</string>
-    <string name="switch_bar_on">On</string>
-
     <!-- Power -->
     <string name="category_power">Power</string>
     <string name="powershare_mode_title">Wireless powershare</string>
@@ -226,7 +201,7 @@
     <string name="jitter_test_summary">Calculate rendering jitter</string>
 
     <!-- USB -->
-    <string name="usb_title">USB</string> 
+    <string name="usb_title">USB</string>
     <string name="usb2_fc_title">USB 2.0 fast charge</string>
     <string name="usb2_fc_summary">Force fast charging of up to 900mA in USB 2.0 mode</string>
     <string name="usb2_fc_warning">Interferes with dash/warp charging; only enable when applicable</string>
