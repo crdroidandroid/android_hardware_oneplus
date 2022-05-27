@@ -21,7 +21,7 @@
     <string name="device_extras_warning_title">Warning</string>
     <string name="device_extras_warning_text">A majority of these features rely on specific kernel nodes in order to function. By flashing a custom kernel, you risk the possibility of losing access to some features. You have been warned!</string>
     <string name="device_extras_dialog">OK</string>
-	
+
     <!-- Alert slider -->
     <string name="notification_slider_category_title">Alert slider</string>
     <string name="notification_slider_title">Alert slider settings</string>
@@ -215,7 +215,7 @@
     <string name="jitter_test_summary">Calculate rendering jitter</string>
 
     <!-- USB -->
-    <string name="usb_title">USB</string> 
+    <string name="usb_title">USB</string>
     <string name="usb2_fc_title">USB 2.0 fast charge</string>
     <string name="usb2_fc_summary">Force fast charging of up to 900mA in USB 2.0 mode</string>
     <string name="usb2_fc_warning">Interferes with dash/warp charging; only enable when applicable</string>

@@ -99,7 +99,7 @@
         <item>20</item>
     </integer-array>
     <integer name="mic_gain_preference_interval">1</integer>
- 
+
     <!-- Sys vibration integers (default, min, max) -->
     <integer-array name="vibrator_strength_preference_array">
         <item>500</item>

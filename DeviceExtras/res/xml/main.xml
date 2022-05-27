@@ -17,8 +17,8 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:settings="http://schemas.android.com/apk/res/org.evolution.oneplus.DeviceExtras"
- 	android.title="@string/device_extras_title">
+        xmlns:settings="http://schemas.android.com/apk/res/org.lineageos.oneplus.DeviceExtras"
+        android.title="@string/device_extras_title">
 
     <!-- Start of alert slider Category -->
     <PreferenceCategory
@@ -77,7 +77,7 @@
             android:summary="@string/ambient_display_gestures_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetClass="org.evolution.oneplus.DeviceExtras.doze.DozeSettingsActivity" />
+                    android:targetClass="org.lineageos.oneplus.DeviceExtras.doze.DozeSettingsActivity" />
         </Preference>
 
        <Preference
@@ -86,8 +86,8 @@
             android:summary="@string/panel_modes_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.evolution.oneplus.DeviceExtras"
-                    android:targetClass="org.evolution.oneplus.DeviceExtras.panelsettings.PanelSettingsActivity" />
+                    android:targetPackage="org.lineageos.oneplus.DeviceExtras"
+                    android:targetClass="org.lineageos.oneplus.DeviceExtras.panelsettings.PanelSettingsActivity" />
         </Preference>
 
         <Preference
@@ -96,8 +96,8 @@
             android:summary="@string/kcal_settings_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.evolution.oneplus.DeviceExtras"
-                    android:targetClass="org.evolution.oneplus.DeviceExtras.kcal.KcalSettingsActivity" />
+                    android:targetPackage="org.lineageos.oneplus.DeviceExtras"
+                    android:targetClass="org.lineageos.oneplus.DeviceExtras.kcal.KcalSettingsActivity" />
         </Preference>
 
         <SwitchPreference
@@ -116,15 +116,15 @@
             android:title="@string/auto_hbm_title"
             android:summary="@string/auto_hbm_summary" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.AutoHBMThresholdPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.AutoHBMThresholdPreference
             android:key="auto_hbm_threshold"
             android:title="@string/auto_hbm_threshold_title"
             android:summary="@string/auto_hbm_threshold_summary" />
-			
+
         <Preference
             android:key="hbm_info"
             android:icon="@drawable/ic_info_outline"
-            android:summary="@string/hbm_mode_warning" 
+            android:summary="@string/hbm_mode_warning"
             android:persistent="false" />
     </PreferenceCategory>
 
@@ -155,7 +155,7 @@
             android:entries="@array/fps_info_color_entries"
             android:entryValues="@array/fps_info_color_values" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.CustomSeekBarPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.CustomSeekBarPreference
             android:key="fps_info_text_size"
             android:title="@string/fps_info_text_size_title"
             android:persistent="true"
@@ -192,8 +192,8 @@
             android:summary="@string/touchscreen_gesture_settings_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.evolution.oneplus.DeviceExtras"
-                    android:targetClass="org.evolution.oneplus.DeviceExtras.touch.TouchscreenGestureSettings" />
+                    android:targetPackage="org.lineageos.oneplus.DeviceExtras"
+                    android:targetClass="org.lineageos.oneplus.DeviceExtras.touch.TouchscreenGestureSettings" />
         </Preference>
 
         <SwitchPreference
@@ -218,12 +218,12 @@
         android:key="speaker"
         android:title="@string/category_speaker">
 
-        <org.evolution.oneplus.DeviceExtras.preferences.EarGainPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.EarGainPreference
             android:key="earpiece_gain"
             android:title="@string/ear_gain_title"
             android:summary="@string/ear_gain_summary" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.MicGainPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.MicGainPreference
             android:key="microphone_gain"
             android:title="@string/mic_gain_title"
             android:summary="@string/mic_gain_summary" />
@@ -240,8 +240,8 @@
             android:summary="@string/jitter_test_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.evolution.oneplus.DeviceExtras"
-                    android:targetClass="org.evolution.oneplus.DeviceExtras.uibench.JitterTestActivity" />
+                    android:targetPackage="org.lineageos.oneplus.DeviceExtras"
+                    android:targetClass="org.lineageos.oneplus.DeviceExtras.uibench.JitterTestActivity" />
         </Preference>
     </PreferenceCategory>
 
@@ -272,17 +272,17 @@
         android:key="vibrator"
         android:title="@string/category_vibrator">
 
-        <org.evolution.oneplus.DeviceExtras.preferences.VibratorStrengthPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.VibratorStrengthPreference
             android:key="vib_strength"
             android:title="@string/vib_strength_title"
             android:summary="@string/vib_strength_summary" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.VibratorCallStrengthPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.VibratorCallStrengthPreference
             android:key="vib_call_strength"
             android:title="@string/vib_call_strength_title"
             android:summary="@string/vib_call_strength_summary" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.VibratorNotifStrengthPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.VibratorNotifStrengthPreference
             android:key="vib_notif_strength"
             android:title="@string/vib_notif_strength_title"
             android:summary="@string/vib_notif_strength_summary" />

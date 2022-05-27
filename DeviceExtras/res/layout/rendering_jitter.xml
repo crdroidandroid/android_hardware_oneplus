@@ -48,7 +48,7 @@
         android:layout_height="0px"
         android:layout_weight="1" />
 
-    <view class="org.evolution.oneplus.DeviceExtras.uibench.JitterTestActivity$PointGraphView"
+    <view class="org.lineageos.oneplus.DeviceExtras.uibench.JitterTestActivity$PointGraphView"
         android:id="@+id/graph"
         android:layout_height="200dp"
         android:layout_width="match_parent" />

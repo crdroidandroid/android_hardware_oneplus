@@ -18,25 +18,28 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.evolution.oneplus.DeviceExtras"
+    package="org.lineageos.oneplus.DeviceExtras"
     android:sharedUserId="android.uid.system"
     android:versionCode="6"
     android:versionName="6.5">
 
+    <uses-permission android:name="android.permission.BIND_DREAM_SERVICE" />
     <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <permission
-        android:name="org.evolution.oneplus.DeviceExtras.touch.TRIGGER_SCREEN_OFF_GESTURE"
+        android:name="org.lineageos.oneplus.DeviceExtras.touch.TRIGGER_SCREEN_OFF_GESTURE"
         android:protectionLevel="signatureOrSystem" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-    <protected-broadcast android:name="org.evolution.oneplus.DeviceExtras.slider.UPDATE_SLIDER_POSITION" />
-    <protected-broadcast android:name="org.evolution.oneplus.DeviceExtras.slider.UPDATE_SLIDER_SETTINGS" />
-    <protected-broadcast android:name="org.evolution.oneplus.DeviceExtras.touch.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="org.lineageos.oneplus.DeviceExtras.slider.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="org.lineageos.oneplus.DeviceExtras.slider.UPDATE_SLIDER_SETTINGS" />
+    <protected-broadcast android:name="org.lineageos.oneplus.DeviceExtras.touch.UPDATE_SETTINGS" />
 
     <uses-sdk
         android:minSdkVersion="28"
@@ -58,9 +61,9 @@
             </intent-filter>
         </receiver>
 
-        <activity 
+        <activity
             android:name=".DeviceExtras" />
-        <activity 
+        <activity
             android:name=".camera.KeyHandler" />
         <activity
             android:name=".slider.KeyHandler" />
@@ -110,7 +113,7 @@
         </activity>
         <activity
             android:name=".touch.ScreenOffLaunchGestureActivity"
-            android:permission="org.evolution.oneplus.DeviceExtras.touch.TRIGGER_SCREEN_OFF_GESTURE"
+            android:permission="org.lineageos.oneplus.DeviceExtras.touch.TRIGGER_SCREEN_OFF_GESTURE"
             android:excludeFromRecents="true"
             android:exported="true"
             android:label="@string/touchscreen_gesture_settings_title"
@@ -174,7 +177,7 @@
         <!-- Search indexing -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.evolution.oneplus.DeviceExtras"
+            android:authorities="org.lineageos.device.DeviceExtras"
             android:exported="true"
             android:grantUriPermissions="true"
             android:multiprocess="false"
