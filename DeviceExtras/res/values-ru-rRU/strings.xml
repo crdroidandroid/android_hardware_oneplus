@@ -111,30 +111,6 @@
     <string name="fps_info_position_center_center">По центру</string>
     <string name="fps_info_position_center_right">Справа по центру</string>
     <string name="fps_info_text_size_title">Размер текста</string>
-    <!-- Doze -->
-    <string name="ambient_enable">Показывать Ambient Display</string>
-    <string name="ambient_display_title">Ambient Display</string>
-    <string name="ambient_display_enable_title">Ambient Display</string>
-    <string name="ambient_display_enable_summary">Включать экран, когда приходит уведомление</string>
-    <string name="ambient_display_gestures_title">Жесты Ambient Display</string>
-    <string name="ambient_display_gestures_summary">Дополнительные жесты для пробуждения экрана</string>
-    <string name="ambient_display_summary">Включать экран, когда приходит уведомление</string>
-    <string name="ambient_display_always_on_title">Always On</string>
-    <string name="dialog_ok">ОК</string>
-    <string name="disabled">Выключено</string>
-    <string name="doze_panel_title">Doze</string>
-    <string name="doze_settings_help_text">Эти функции используют датчики для отображения уведомлений. Датчик проверяется только при поступлении нового уведомления, что помогает сэкономить заряд батареи. Можно активировать включение датчика сразу при отключении экрана устройства, однако это может увеличить расход батареи.</string>
-    <string name="doze_settings_help_title">Помощь</string>
-    <string name="pickup_sensor_title">Датчик движения</string>
-    <string name="pick_up_gesture_title">Поднятие телефона</string>
-    <string name="pick_up_gesture_summary">Отображать уведомления при поднятии устройства</string>
-    <string name="pick_up_wake_gesture_summary">Пробуждать устройство при поднятии</string>
-    <string name="pocket_gesture_title">В кармане</string>
-    <string name="pocket_gesture_summary">Отображать уведомления при извлечении устройства из кармана</string>
-    <string name="proximity_sensor_title">Датчик приближения</string>
-    <string name="ambient_display_always_on_summary">Показывать время, значки уведомлений и другую информацию. Увеличивает расход батареи.</string>
-    <string name="switch_bar_off">Выключено</string>
-    <string name="switch_bar_on">Включено</string>
     <!-- Power -->
     <string name="category_power">Питание</string>
     <string name="powershare_mode_title">Беспроводной PowerShare</string>

@@ -172,19 +172,6 @@
         <item>8</item>
     </string-array>
 
-    <!-- Pickup gesture -->
-    <string-array name="pick_up_gesture_entries" translatable="false">
-        <item>@string/disabled</item>
-        <item>@string/pick_up_gesture_summary</item>
-        <item>@string/pick_up_wake_gesture_summary</item>
-    </string-array>
-
-    <string-array name="pick_up_gesture_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
     <!-- Screen off Gestures -->
     <string-array name="touchscreen_gesture_action_entries">
         <item>@string/touchscreen_gesture_action_do_nothing</item>

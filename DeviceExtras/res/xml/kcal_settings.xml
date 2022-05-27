@@ -15,38 +15,38 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:settings="http://schemas.android.com/apk/res/org.evolution.oneplus.DeviceExtras"
- 	android.title="@string/kcal_settings_title">
+        xmlns:settings="http://schemas.android.com/apk/res/org.lineageos.oneplus.DeviceExtras"
+        android.title="@string/kcal_settings_title">
 
     <PreferenceCategory
         android:key="kcal_values"
         android:title="@string/kcal_settings">
 
-        <org.evolution.oneplus.DeviceExtras.preferences.RedPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.RedPreference
             android:key="red"
             android:title="@string/red_title" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.GreenPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.GreenPreference
             android:key="green"
             android:title="@string/green_title" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.BluePreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.BluePreference
             android:key="blue"
             android:title="@string/blue_title" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.SaturationPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.SaturationPreference
             android:key="saturation"
             android:title="@string/saturation_title" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.HuePreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.HuePreference
             android:key="hue"
             android:title="@string/hue_title" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.ValuePreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.ValuePreference
             android:key="value"
             android:title="@string/value_title" />
 
-        <org.evolution.oneplus.DeviceExtras.preferences.ContrastPreference
+        <org.lineageos.oneplus.DeviceExtras.preferences.ContrastPreference
             android:key="contrast"
             android:title="@string/contrast_title" />
     </PreferenceCategory>
