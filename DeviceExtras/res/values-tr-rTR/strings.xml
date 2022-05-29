@@ -99,30 +99,6 @@
     <string name="fps_info_position_bottom_center">Orta alt</string>
     <string name="fps_info_position_bottom_right">Sağ alt</string>
     <string name="fps_info_text_size_title">Metin boyutu</string>
-    <!-- Doze -->
-    <string name="ambient_enable">Ortam ekranını göster</string>
-    <string name="ambient_display_title">Ortam ekranı</string>
-    <string name="ambient_display_enable_title">Ortam ekranı</string>
-    <string name="ambient_display_enable_summary">Bildirim aldığınızda ekranı uyandırır</string>
-    <string name="ambient_display_gestures_title">Ortam ekranı hareketleri</string>
-    <string name="ambient_display_gestures_summary">Ekranı uyandırmak için ek hareketler</string>
-    <string name="ambient_display_summary">Bildirim aldığınızda ekranı uyandırır</string>
-    <string name="ambient_display_always_on_title">Her zaman açık</string>
-    <string name="dialog_ok">Tamam</string>
-    <string name="disabled">Devre dışı</string>
-    <string name="doze_panel_title">Uyku</string>
-    <string name="doze_settings_help_text">Bu özellikler bildirim ekranını başlatmak için sensörleri kullanır. Seçilen sensör sadece cihaz bildirim aldığında etkinleştirilir, bu durum pil kullanımını azaltmaya yardımcı olur. Seçilen sensörü ekran kapandığı anda etkinleştirmek için bir seçenek de vardır fakat bu seçeneği kullanmak daha yüksek pil kullanımına neden olur.</string>
-    <string name="doze_settings_help_title">Yardım</string>
-    <string name="pickup_sensor_title">Ele alma sensörü</string>
-    <string name="pick_up_gesture_title">Telefonu kaldır</string>
-    <string name="pick_up_gesture_summary">Telefonu kaldırınca bildirimleri göster</string>
-    <string name="pick_up_wake_gesture_summary">Telefonu kaldırınca cihazı uyandır</string>
-    <string name="pocket_gesture_title">Cep modu</string>
-    <string name="pocket_gesture_summary">Cepten çıkarıldığında bildirimleri göster</string>
-    <string name="proximity_sensor_title">Yakınlık sensörü</string>
-    <string name="ambient_display_always_on_summary">Saati, bildirim simgelerini ve diğer bilgileri gösterir. Pil kullanımını artırır.</string>
-    <string name="switch_bar_off">Kapalı</string>
-    <string name="switch_bar_on">Açık</string>
     <!-- Power -->
     <string name="category_power">Güç</string>
     <string name="powershare_mode_title">Kablosuz güç paylaşımı</string>

@@ -99,30 +99,6 @@
     <string name="fps_info_position_bottom_center">Unten zentriert</string>
     <string name="fps_info_position_bottom_right">Unten rechts</string>
     <string name="fps_info_text_size_title">Schriftgröße</string>
-    <!-- Doze -->
-    <string name="ambient_enable">Ambient-Display anzeigen</string>
-    <string name="ambient_display_title">Inaktivitätsdisplay</string>
-    <string name="ambient_display_enable_title">Inaktivitätsdisplay</string>
-    <string name="ambient_display_enable_summary">Bei Benachrichtigungen Bildschirm aktivieren</string>
-    <string name="ambient_display_gestures_title">Inaktivitätsdisplay-Gesten</string>
-    <string name="ambient_display_gestures_summary">Zusätzliche Gesten zum Aufwecken des Displays</string>
-    <string name="ambient_display_summary">Bei Benachrichtigungen Bildschirm aktivieren</string>
-    <string name="ambient_display_always_on_title">Immer aktiviert</string>
-    <string name="dialog_ok">OK</string>
-    <string name="disabled">Deaktiviert</string>
-    <string name="doze_panel_title">Doze</string>
-    <string name="doze_settings_help_text">Diese Funktionen nutzen Sensordaten, um einen Benachrichtigungspuls zu starten. Der gewählte Sensor ist nur aktiv, wenn das Gerät eine Benachrichtigung erhält, was hilft, den Akkuverbrauch zu reduzieren. Es gibt auch eine Option, den gewählten Sensor zu aktivieren, sobald der Bildschirm ausgeschaltet ist, was den Akkuverbrauch erhöht.</string>
-    <string name="doze_settings_help_title">Hilfe</string>
-    <string name="pickup_sensor_title">Bewegungssensor</string>
-    <string name="pick_up_gesture_title">Aufheben</string>
-    <string name="pick_up_gesture_summary">Benachrichtigungen kurz einblenden, wenn das Gerät aufgehoben wird</string>
-    <string name="pick_up_wake_gesture_summary">Gerät beim Anheben aufwecken</string>
-    <string name="pocket_gesture_title">Tasche</string>
-    <string name="pocket_gesture_summary">Benachrichtigungen kurz einblenden, wenn das Gerät aus der Tasche genommen wird</string>
-    <string name="proximity_sensor_title">Näherungssensor</string>
-    <string name="ambient_display_always_on_summary">Uhrzeit, Benachrichtigungssymbole und andere Informationen anzeigen. Erhöhter Akkuverbrauch.</string>
-    <string name="switch_bar_off">Aus</string>
-    <string name="switch_bar_on">Ein</string>
     <!-- Power -->
     <string name="category_power">Leistung</string>
     <string name="powershare_mode_title">Umgekehrtes kabelloses Aufladen </string>

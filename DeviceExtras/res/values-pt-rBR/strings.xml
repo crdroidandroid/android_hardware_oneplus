@@ -111,30 +111,6 @@
     <string name="fps_info_position_center_center">Centro</string>
     <string name="fps_info_position_center_right">Centro à direita</string>
     <string name="fps_info_text_size_title">Tamanho do texto</string>
-    <!-- Doze -->
-    <string name="ambient_enable">Mostrar tela ambiente</string>
-    <string name="ambient_display_title">Tela ambiente</string>
-    <string name="ambient_display_enable_title">Tela ambiente</string>
-    <string name="ambient_display_enable_summary">Ativar a tela ao receber notificações</string>
-    <string name="ambient_display_gestures_title">Gestos para a tela ambiente</string>
-    <string name="ambient_display_gestures_summary">Gestos adicionais para ligar a tela</string>
-    <string name="ambient_display_summary">Ativar a tela ao receber notificações</string>
-    <string name="ambient_display_always_on_title">Sempre ativa</string>
-    <string name="dialog_ok">OK</string>
-    <string name="disabled">Desativado</string>
-    <string name="doze_panel_title">Repouso</string>
-    <string name="doze_settings_help_text">Esses recursos monitoram o sensor para que o dispositivo possa despertar do estado de repouso e pulsar notificações. O sensor escolhido só é habilitado quando o dispositivo recebe uma notificação, isso ajuda a reduzir o uso de bateria. Há também uma opção para ativar o sensor escolhido assim que a tela desliga, isso causará o maior uso da bateria.</string>
-    <string name="doze_settings_help_title">Ajuda</string>
-    <string name="pickup_sensor_title">Sensor de movimento</string>
-    <string name="pick_up_gesture_title">Pegar</string>
-    <string name="pick_up_gesture_summary">Mostrar notificações ao pegar o dispositivo</string>
-    <string name="pick_up_wake_gesture_summary">Acordar o dispositivo ao pegar</string>
-    <string name="pocket_gesture_title">Bolso</string>
-    <string name="pocket_gesture_summary">Pulsar notificações ao retirar do bolso</string>
-    <string name="proximity_sensor_title">Sensor de proximidade</string>
-    <string name="ambient_display_always_on_summary">Mostrar hora, ícones de notificação e outras informações. Aumenta o uso de bateria.</string>
-    <string name="switch_bar_off">Desligado</string>
-    <string name="switch_bar_on">Ligado</string>
     <!-- Power -->
     <string name="category_power">Energia</string>
     <string name="powershare_mode_title">Compartilhamento de energia sem fio</string>

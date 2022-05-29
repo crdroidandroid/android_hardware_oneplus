@@ -71,15 +71,6 @@
         android:key="display"
         android:title="@string/display_title">
 
-        <Preference
-            android:key="advanced_doze_settings"
-            android:title="@string/ambient_display_gestures_title"
-            android:summary="@string/ambient_display_gestures_summary"
-            android:persistent="false" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetClass="org.lineageos.oneplus.DeviceExtras.doze.DozeSettingsActivity" />
-        </Preference>
-
        <Preference
             android:key="panel_modes"
             android:title="@string/panel_modes_title"

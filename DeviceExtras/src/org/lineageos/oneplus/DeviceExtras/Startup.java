@@ -40,7 +40,6 @@ public class Startup extends BroadcastReceiver {
     public void onReceive(final Context context, final Intent bootintent) {
 
         DeviceExtras.restoreSliderStates(context);
-        org.lineageos.oneplus.DeviceExtras.doze.DozeUtils.checkDozeService(context);
         EarGainPreference.restore(context);
         MicGainPreference.restore(context);
         org.lineageos.oneplus.DeviceExtras.touch.TouchscreenGestureSettings.MainSettingsFragment.restoreTouchscreenGestureStates(context);

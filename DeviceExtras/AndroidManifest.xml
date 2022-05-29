@@ -132,22 +132,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Doze service -->
-        <service
-            android:name=".doze.DozeService"
-            android:permission="OneplusDozeService" />
-
-        <!-- Doze Activity -->
-        <activity
-            android:name=".doze.DozeSettingsActivity"
-            android:exported="true"
-            android:label="@string/ambient_display_title">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
         <!-- Jitter Test Activity -->
         <activity
             android:name=".uibench.JitterTestActivity"

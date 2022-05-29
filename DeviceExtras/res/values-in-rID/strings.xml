@@ -111,30 +111,6 @@
     <string name="fps_info_position_center_center">Tengah</string>
     <string name="fps_info_position_center_right">Kanan tengah</string>
     <string name="fps_info_text_size_title">Ukuran teks</string>
-    <!-- Doze -->
-    <string name="ambient_enable">Gunakan tampilan ambien</string>
-    <string name="ambient_display_title">Tampilan ambien</string>
-    <string name="ambient_display_enable_title">Tampilan ambien</string>
-    <string name="ambient_display_enable_summary">Hidupkan layar saat Anda menerima notifikasi</string>
-    <string name="ambient_display_gestures_title">Gestur tampilan ambien</string>
-    <string name="ambient_display_gestures_summary">Gestur tambahan untuk membangunkan layar</string>
-    <string name="ambient_display_summary">Hidupkan layar saat Anda menerima notifikasi</string>
-    <string name="ambient_display_always_on_title">Selalu aktif</string>
-    <string name="dialog_ok">OKE</string>
-    <string name="disabled">Dinonaktifkan</string>
-    <string name="doze_panel_title">Doze</string>
-    <string name="doze_settings_help_text">Fitur-fitur ini menggunakan aktivitas sensor untuk meluncurkan notifikasi saat tertidur. Sensor yang dipilih hanya diaktifkan bila perangkat menerima notifikasi, ini membantu mengurangi penggunaan baterai. Ada juga pilihan untuk mengaktifkan sensor yang dipilih secepat layar mati, ini akan menyebabkan penggunaan baterai yang lebih tinggi.</string>
-    <string name="doze_settings_help_title">Bantuan</string>
-    <string name="pickup_sensor_title">Sensor pengambilan</string>
-    <string name="pick_up_gesture_title">Ambil</string>
-    <string name="pick_up_gesture_summary">Tampilkan notifikasi saat diambil</string>
-    <string name="pick_up_wake_gesture_summary">Bangunkan perangkat saat diambil</string>
-    <string name="pocket_gesture_title">Saku</string>
-    <string name="pocket_gesture_summary">Tampilkan notifikasi saat keluar dari saku</string>
-    <string name="proximity_sensor_title">Sensor jarak</string>
-    <string name="ambient_display_always_on_summary">Tampilkan waktu, ikon notifikasi dan info lainnya. Penggunaan baterai akan meningkat.</string>
-    <string name="switch_bar_off">Nonaktif</string>
-    <string name="switch_bar_on">Aktif</string>
     <!-- Power -->
     <string name="category_power">Matikan Daya</string>
     <string name="powershare_mode_title">PowerShare Nirkabel</string>
