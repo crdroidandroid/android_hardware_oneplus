@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The Android Open Source Project
+ * Copyright (C) 2022 The Evolution X Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,26 +58,19 @@ public class JitterTestActivity extends Activity {
     private Handler mUpdateHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case R.id.jitter_mma:
-                    mJitterReport.setText((CharSequence) msg.obj);
-                    break;
-                case R.id.totalish_mma:
-                    mMostlyTotalFrameTimeReport.setText((CharSequence) msg.obj);
-                    break;
-                case R.id.ui_frametime_mma:
-                    mUiFrameTimeReport.setText((CharSequence) msg.obj);
-                    break;
-                case R.id.rt_frametime_mma:
-                    mRenderThreadTimeReport.setText((CharSequence) msg.obj);
-                    break;
-                case R.id.total_mma:
-                    mTotalFrameTimeReport.setText((CharSequence) msg.obj);
-                    break;
-                case R.id.graph:
-                    mGraph.addJitterSample(msg.arg1, msg.arg2);
-                    break;
-            }
+            if (msg.what == R.id.jitter_mma) {
+				mJitterReport.setText((CharSequence) msg.obj);
+			} else if (msg.what == R.id.totalish_mma) {
+				mMostlyTotalFrameTimeReport.setText((CharSequence) msg.obj);
+			} else if (msg.what == R.id.ui_frametime_mma) {
+				mUiFrameTimeReport.setText((CharSequence) msg.obj);
+			} else if (msg.what == R.id.rt_frametime_mma) {
+				mRenderThreadTimeReport.setText((CharSequence) msg.obj);
+			} else if (msg.what == R.id.total_mma) {
+				mTotalFrameTimeReport.setText((CharSequence) msg.obj);
+			} else if (msg.what == R.id.graph) {
+				mGraph.addJitterSample(msg.arg1, msg.arg2);
+			}
         }
     };
 
