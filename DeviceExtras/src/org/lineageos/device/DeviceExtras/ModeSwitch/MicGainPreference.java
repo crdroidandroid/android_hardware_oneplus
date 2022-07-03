@@ -68,6 +68,8 @@ public class MicGainPreference extends CustomSeekBarPreference {
             return;
         }
 
+        int[] mAllValues = context.getResources().getIntArray(R.array.mic_gain_preference_array);
+        mDefVal = mAllValues[0];
         String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceExtras.KEY_MIC_GAIN, String.valueOf(mDefVal));
         FileUtils.writeValue(getFile(context), storedValue);
     }

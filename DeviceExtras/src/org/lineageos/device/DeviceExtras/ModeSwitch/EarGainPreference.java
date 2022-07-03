@@ -68,6 +68,8 @@ public class EarGainPreference extends CustomSeekBarPreference {
             return;
         }
 
+        int[] mAllValues = context.getResources().getIntArray(R.array.ear_gain_preference_array);
+        mDefVal = mAllValues[0];
         String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceExtras.KEY_EAR_GAIN, String.valueOf(mDefVal));
         FileUtils.writeValue(getFile(context), storedValue);
     }

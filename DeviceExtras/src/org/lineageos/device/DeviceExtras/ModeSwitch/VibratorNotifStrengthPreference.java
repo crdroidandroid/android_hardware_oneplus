@@ -78,6 +78,8 @@ public class VibratorNotifStrengthPreference extends CustomSeekBarPreference {
             return;
         }
 
+        int[] mAllValues = context.getResources().getIntArray(R.array.vibrator_notif_strength_preference_array);
+        mDefVal = mAllValues[0];
         String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceExtras.KEY_NOTIF_VIBSTRENGTH, String.valueOf(mDefVal));
         FileUtils.writeValue(getFile(context), storedValue);
     }
