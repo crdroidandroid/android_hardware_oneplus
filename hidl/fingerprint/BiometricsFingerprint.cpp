@@ -103,6 +103,7 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    set(NOTIFY_DIM_PATH, 0); // Fix BlackScreenOS!
     set(NOTIFY_PRESS_PATH, 0);
 
     return Void();
