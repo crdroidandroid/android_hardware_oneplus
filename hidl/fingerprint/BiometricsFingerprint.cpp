@@ -398,6 +398,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                 if (!thisPtr->mClientCallback->onError(devId, result, vendorCode).isOk()) {
                     ALOGE("failed to invoke fingerprint onError callback");
                 }
+                getInstance()->onFingerUp();
             }
             break;
         case FINGERPRINT_ACQUIRED: {
