@@ -209,6 +209,34 @@ public class DeviceExtras extends PreferenceFragment
             mAutoHBMSwitch = (TwoStatePreference) findPreference(KEY_AUTO_HBM_SWITCH);
             mAutoHBMSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceExtras.KEY_AUTO_HBM_SWITCH, false));
             mAutoHBMSwitch.setOnPreferenceChangeListener(this);
+
+            // EasterEgg (HBM Info)
+            mHBMInfo = (Preference)findPreference(KEY_HBM_INFO);
+            mHBMInfo.setOnPreferenceClickListener(preference -> {
+
+            Random rand =new Random();
+
+            int firstRandom = rand.nextInt(91-0);
+            int secondRandom = rand.nextInt(181-90)+90;
+            int thirdRandom = rand.nextInt(181-0);
+
+            Drawable cr_logo = getResources().getDrawable(R.drawable.cr_logo,null);
+            int randomColor;
+            randomColor = Color.rgb(
+            Color.red(rand.nextInt(0xFFFFFF)),
+            Color.green(rand.nextInt(0xFFFFFF)),
+            Color.blue(rand.nextInt(0xFFFFFF)));
+            cr_logo.setTint(randomColor);
+
+            ParticleSystem ps = new ParticleSystem(getActivity(),50,cr_logo,2000);
+            ps.setScaleRange(0.7f,1.3f);
+            ps.setSpeedRange(0.1f,0.25f);
+            ps.setAcceleration(0.0001f,thirdRandom);
+            ps.setRotationSpeedRange(firstRandom,secondRandom);
+            ps.setFadeOut(300);
+            ps.oneShot(this.getView(),50);
+            return true;
+            });
         }
         else {
             findPreference(KEY_HBM_SWITCH).setVisible(false);
@@ -220,34 +248,6 @@ public class DeviceExtras extends PreferenceFragment
         if (!displayCategory) {
             getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_DISPLAY));
         }
-
-        // EasterEgg (HBM Info)
-        mHBMInfo = (Preference)findPreference(KEY_HBM_INFO);
-        mHBMInfo.setOnPreferenceClickListener(preference -> {
-
-        Random rand =new Random();
-
-        int firstRandom = rand.nextInt(91-0);
-        int secondRandom = rand.nextInt(181-90)+90;
-        int thirdRandom = rand.nextInt(181-0);
-
-        Drawable cr_logo = getResources().getDrawable(R.drawable.cr_logo,null);
-        int randomColor;
-        randomColor = Color.rgb(
-        Color.red(rand.nextInt(0xFFFFFF)),
-        Color.green(rand.nextInt(0xFFFFFF)),
-        Color.blue(rand.nextInt(0xFFFFFF)));
-        cr_logo.setTint(randomColor);
-
-        ParticleSystem ps = new ParticleSystem(getActivity(),50,cr_logo,2000);
-        ps.setScaleRange(0.7f,1.3f);
-        ps.setSpeedRange(0.1f,0.25f);
-        ps.setAcceleration(0.0001f,thirdRandom);
-        ps.setRotationSpeedRange(firstRandom,secondRandom);
-        ps.setFadeOut(300);
-        ps.oneShot(this.getView(),50);
-        return true;
-        });
 
         // FPS
         if (isFeatureSupported(context, R.bool.config_deviceSupportsFPS)) {
