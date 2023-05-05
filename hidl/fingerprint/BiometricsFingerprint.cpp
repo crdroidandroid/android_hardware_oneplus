@@ -95,7 +95,6 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
-    this->isCancelled = 0;
     set(NOTIFY_DIM_PATH, 1); // Fixme! workaround for in-app fod auth
     set(NOTIFY_PRESS_PATH, 1);
 
@@ -103,6 +102,7 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    this->isCancelled = 0;
     set(NOTIFY_DIM_PATH, 0); // Fix BlackScreenOS!
     set(NOTIFY_PRESS_PATH, 0);
 
