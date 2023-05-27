@@ -61,6 +61,8 @@
 
     <!-- CPU -->
     <string name="cpu_title">CPU</string>
+    <string name="gpu_throttling_title">Adreno GPU thermal throttling</string>
+    <string name="gpu_throttling_summary">Allow lowering GPU frequencies to reduce temperatures</string>
 
     <!-- Display -->
     <string name="display_title">Display</string>
