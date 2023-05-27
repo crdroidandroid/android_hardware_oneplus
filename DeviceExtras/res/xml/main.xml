@@ -71,6 +71,10 @@
         android:key="cpu"
         android:title="@string/cpu_title">
 
+        <SwitchPreference
+            android:key="gpu_throttling"
+            android:title="@string/gpu_throttling_title"
+            android:summary="@string/gpu_throttling_summary" />
     </PreferenceCategory>
 
     <!-- Start of display Category -->
