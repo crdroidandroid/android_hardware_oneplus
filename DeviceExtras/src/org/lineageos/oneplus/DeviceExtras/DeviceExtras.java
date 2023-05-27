@@ -73,7 +73,9 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_CATEGORY_AUDIO = "audio";
 
     public static final String KEY_CATEGORY_CPU = "cpu";
+    public static final String KEY_GPU_THROTTLING_SWITCH = "gpu_throttling";
     public static final String KEY_TOUCHBOOST_SWITCH = "touchboost";
+    private static TwoStatePreference mGPUThrottlingModeSwitch;
     private static TwoStatePreference mTouchBoostModeSwitch;
 
     public static final String KEY_CATEGORY_DISPLAY = "display";
@@ -260,7 +262,17 @@ public class DeviceExtras extends PreferenceFragment
 
         boolean cpuCategory = false;
 
-        // CPU or GPU stuff here
+        // GPU Throttling
+        cpuCategory = cpuCategory | isFeatureSupported(context, R.bool.config_deviceSupportsGPUThrottling);
+        if (isFeatureSupported(context, R.bool.config_deviceSupportsGPUThrottling)) {
+            mGPUThrottlingModeSwitch = (TwoStatePreference) findPreference(KEY_GPU_THROTTLING_SWITCH);
+            mGPUThrottlingModeSwitch.setEnabled(GPUThrottlingModeSwitch.isSupported(this.getContext()));
+            mGPUThrottlingModeSwitch.setOnPreferenceChangeListener(new GPUThrottlingModeSwitch());
+        }
+        else {
+           findPreference(KEY_GPU_THROTTLING_SWITCH).setVisible(false);
+        }
+
         if (!cpuCategory) {
             getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_CPU));
         }
