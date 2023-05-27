@@ -114,6 +114,10 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
             restore(TPEdgeLimitModeSwitch.getFile(context), enabled);
                }
+        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_GPU_THROTTLING_SWITCH, false);
+        if (enabled) {
+            restore(GPUThrottlingModeSwitch.getFile(context), enabled);
+               }
         enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_USB2_SWITCH, false);
         if (enabled) {
         restore(USB2FastChargeModeSwitch.getFile(context), enabled);
