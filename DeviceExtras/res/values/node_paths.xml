@@ -64,6 +64,9 @@
     <!-- DC-dimming sysfs node path -->
     <string name="node_dc_mode_switch"></string>
 
+    <!-- Adreno Boost sysfs node path -->
+    <string name="node_gpu_boost_preference"></string>
+
     <!-- Adreno GPU Throttling sysfs node path -->
     <string name="node_gpu_throttling_mode_switch"></string>
 
