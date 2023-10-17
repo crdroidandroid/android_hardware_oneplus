@@ -71,6 +71,11 @@
         android:key="cpu"
         android:title="@string/cpu_title">
 
+        <org.lineageos.oneplus.DeviceExtras.preferences.AdrenoGPUBoostPreference
+            android:key="gpu_boost"
+            android:title="@string/gpu_boost_title"
+            android:summary="@string/gpu_boost_summary" />
+
         <SwitchPreference
             android:key="gpu_throttling"
             android:title="@string/gpu_throttling_title"
