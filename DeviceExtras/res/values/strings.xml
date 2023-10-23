@@ -59,8 +59,8 @@
     <string name="dolby_title">Dolby Atmos</string>
     <string name="dolby_summary">Enhance your audio experience with dolby</string>
 
-    <!-- CPU -->
-    <string name="cpu_title">CPU</string>
+    <!-- GPU -->
+    <string name="cpu_title">GPU</string>
     <string name="gpu_boost_title">Adreno Boost value</string>
     <string name="gpu_boost_summary">Boost Adreno GPU frequencies more aggressively under load</string>
     <string name="gpu_throttling_title">Adreno GPU thermal throttling</string>
