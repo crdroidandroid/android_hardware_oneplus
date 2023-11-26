@@ -61,8 +61,6 @@
 
     <!-- CPU -->
     <string name="cpu_title">CPU</string>
-    <string name="power_efficient_workqueue_title">Power efficient workqueue</string>
-    <string name="power_efficient_workqueue_summary">Save power by rescheduling work to a core that is already awake</string>
 
     <!-- Display -->
     <string name="display_title">Display</string>

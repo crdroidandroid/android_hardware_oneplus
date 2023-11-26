@@ -73,9 +73,7 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_CATEGORY_AUDIO = "audio";
 
     public static final String KEY_CATEGORY_CPU = "cpu";
-    public static final String KEY_POWER_EFFICIENT_WQ_SWITCH = "power_efficient_workqueue";
     public static final String KEY_TOUCHBOOST_SWITCH = "touchboost";
-    private static TwoStatePreference mPowerEfficientWorkqueueModeSwitch;
     private static TwoStatePreference mTouchBoostModeSwitch;
 
     public static final String KEY_CATEGORY_DISPLAY = "display";
@@ -262,17 +260,7 @@ public class DeviceExtras extends PreferenceFragment
 
         boolean cpuCategory = false;
 
-        // Power Efficient Workqueue
-        cpuCategory = cpuCategory | isFeatureSupported(context, R.bool.config_deviceSupportsPowerEfficientWorkqueue);
-        if (isFeatureSupported(context, R.bool.config_deviceSupportsPowerEfficientWorkqueue)) {
-            mPowerEfficientWorkqueueModeSwitch = (TwoStatePreference) findPreference(KEY_POWER_EFFICIENT_WQ_SWITCH);
-            mPowerEfficientWorkqueueModeSwitch.setEnabled(PowerEfficientWorkqueueModeSwitch.isSupported(this.getContext()));
-            mPowerEfficientWorkqueueModeSwitch.setOnPreferenceChangeListener(new PowerEfficientWorkqueueModeSwitch());
-        }
-        else {
-           findPreference(KEY_POWER_EFFICIENT_WQ_SWITCH).setVisible(false);
-        }
-
+        // CPU or GPU stuff here
         if (!cpuCategory) {
             getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_CPU));
         }

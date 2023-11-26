@@ -71,10 +71,6 @@
         android:key="cpu"
         android:title="@string/cpu_title">
 
-        <SwitchPreference
-            android:key="power_efficient_workqueue"
-            android:title="@string/power_efficient_workqueue_title"
-            android:summary="@string/power_efficient_workqueue_summary" />
     </PreferenceCategory>
 
     <!-- Start of display Category -->

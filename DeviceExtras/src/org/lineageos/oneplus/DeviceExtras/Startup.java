@@ -114,10 +114,6 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
             restore(TPEdgeLimitModeSwitch.getFile(context), enabled);
                }
-        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_POWER_EFFICIENT_WQ_SWITCH, false);
-        if (enabled) {
-            restore(PowerEfficientWorkqueueModeSwitch.getFile(context), enabled);
-               }
         enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_USB2_SWITCH, false);
         if (enabled) {
         restore(USB2FastChargeModeSwitch.getFile(context), enabled);
