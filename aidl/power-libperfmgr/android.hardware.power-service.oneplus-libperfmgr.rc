@@ -1,4 +1,4 @@
-service vendor.power-hal-aidl /vendor/bin/hw/android.hardware.power-service.xiaomi-libperfmgr
+service vendor.power-hal-aidl /vendor/bin/hw/android.hardware.power-service.oneplus-libperfmgr
     class hal
     user root
     group system
@@ -29,4 +29,3 @@ on property:ro.debuggable=1 && property:vendor.powerhal.config.debug=*
 
 on property:persist.vendor.powerhal.config.debug=*
     setprop vendor.powerhal.config.debug ${persist.vendor.powerhal.config.debug}
-
