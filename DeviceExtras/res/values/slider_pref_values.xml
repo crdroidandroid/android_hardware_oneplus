@@ -30,7 +30,7 @@
 
     <!-- Adreno Boost integers (default, min, max) -->
     <integer-array name="gpu_boost_preference_array">
-        <item>1</item>
+        <item>0</item>
         <item>0</item>
         <item>3</item>
     </integer-array>
