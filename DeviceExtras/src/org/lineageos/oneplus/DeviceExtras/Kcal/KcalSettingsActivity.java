@@ -28,7 +28,6 @@ import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.ViewPager;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.widget.R;
 
 import org.lineageos.oneplus.DeviceExtras.ViewPagerAdapter;
 
@@ -44,15 +43,15 @@ public class KcalSettingsActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kcal);
+        setContentView(org.lineageos.oneplus.DeviceExtras.R.layout.kcal);
 
         setupImageSlider();
 
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.fragment_kcal);
+        Fragment fragment = getFragmentManager().findFragmentById(org.lineageos.oneplus.DeviceExtras.R.id.fragment_kcal);
         if (fragment == null) {
             mKcalSettingsFragment = new KcalSettings();
             getFragmentManager().beginTransaction()
-                .add(R.id.fragment_kcal, mKcalSettingsFragment)
+                .add(org.lineageos.oneplus.DeviceExtras.R.id.fragment_kcal, mKcalSettingsFragment)
                 .commit();
         } else {
             mKcalSettingsFragment = (KcalSettings) fragment;
@@ -60,8 +59,8 @@ public class KcalSettingsActivity extends CollapsingToolbarBaseActivity {
     }
 
     private void setupImageSlider() {
-        viewPager = (ViewPager) findViewById(R.id.preview);
-        sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
+        viewPager = (ViewPager) findViewById(org.lineageos.oneplus.DeviceExtras.R.id.preview);
+        sliderDotspanel = (LinearLayout) findViewById(org.lineageos.oneplus.DeviceExtras.R.id.SliderDots);
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getApplicationContext());
         viewPager.setAdapter(viewPagerAdapter);
@@ -71,14 +70,14 @@ public class KcalSettingsActivity extends CollapsingToolbarBaseActivity {
 
         for(int i = 0; i < dotscount; i++) {
             dots[i] = new ImageView(getApplicationContext());
-            dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.inactive_dot));
+            dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), org.lineageos.oneplus.DeviceExtras.R.drawable.inactive_dot));
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             params.setMargins(8, 0, 8, 0);
             sliderDotspanel.addView(dots[i], params);
         }
 
-        dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
+        dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), org.lineageos.oneplus.DeviceExtras.R.drawable.active_dot));
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
@@ -90,9 +89,9 @@ public class KcalSettingsActivity extends CollapsingToolbarBaseActivity {
             public void onPageSelected(int position) {
 
                 for(int i = 0; i< dotscount; i++){
-                    dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.inactive_dot));
+                    dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), org.lineageos.oneplus.DeviceExtras.R.drawable.inactive_dot));
                 }
-                dots[position].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
+                dots[position].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), org.lineageos.oneplus.DeviceExtras.R.drawable.active_dot));
             }
 
             @Override
