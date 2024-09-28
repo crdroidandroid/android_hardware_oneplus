@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2021-2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -10,6 +10,10 @@
 #elif __has_include(<drm/sde_drm.h>)
 #include <drm/sde_drm.h>
 #endif
+
+uint32_t getUdfpsDimZOrder(uint32_t z) {
+    return z;
+}
 
 uint32_t getUdfpsZOrder(uint32_t z, bool touched) {
 #ifdef FOD_PRESSED_LAYER_ZORDER
