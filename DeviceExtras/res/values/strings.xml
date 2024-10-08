@@ -209,6 +209,7 @@
     <string name="usb2_fc_warning">Interferes with dash/warp charging; only enable when applicable</string>
     <string name="otg_title">USB-OTG</string>
     <string name="otg_summary">Enable USB on-the-go mode</string>
+    <string name="otg_warning">Usually handled by USB Gadget HAL; only toggle if device stops recognizing connected USB cables/devices</string>
 
     <!-- Vibrator -->
     <string name="category_vibrator">Vibrator</string>

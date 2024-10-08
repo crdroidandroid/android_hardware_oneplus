@@ -143,6 +143,7 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_USB2_SWITCH = "usb2_fast_charge";
     public static final String KEY_USB2_INFO = "usb2_info";
     public static final String KEY_OTG_SWITCH = "otg";
+    public static final String KEY_OTG_INFO = "otg_info";
     private static TwoStatePreference mUSB2FastChargeModeSwitch;
     private static TwoStatePreference mOTGModeSwitch;
 
@@ -466,6 +467,7 @@ public class DeviceExtras extends PreferenceFragment
         }
         else {
            findPreference(KEY_OTG_SWITCH).setVisible(false);
+           findPreference(KEY_OTG_INFO).setVisible(false);
         }
 
         if (!usbCategory) {

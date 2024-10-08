@@ -290,6 +290,12 @@
             android:key="otg"
             android:summary="@string/otg_summary"
             android:title="@string/otg_title" />
+
+        <Preference
+            android:key="otg_info"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/otg_warning"
+            android:persistent="false" />
     </PreferenceCategory>
 
     <!-- Start of vibrator Category -->
