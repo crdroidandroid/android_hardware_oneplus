@@ -60,7 +60,7 @@
 
     <!-- High Brightnes sysfs node path -->
     <string name="node_hbm_mode_switch"></string>
- 
+
     <!-- DC-dimming sysfs node path -->
     <string name="node_dc_mode_switch"></string>
 
@@ -75,7 +75,7 @@
 
     <!-- Measuered FPS sysfs node path -->
     <string name="node_fps_info_service"></string>
-    
+
     <!-- PowerShare procfs node path -->
     <string name="node_powershare_mode_switch"></string>
 
