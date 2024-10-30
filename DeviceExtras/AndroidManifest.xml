@@ -41,10 +41,6 @@
     <protected-broadcast android:name="org.lineageos.oneplus.DeviceExtras.slider.UPDATE_SLIDER_SETTINGS" />
     <protected-broadcast android:name="org.lineageos.oneplus.DeviceExtras.touch.UPDATE_SETTINGS" />
 
-    <uses-sdk
-        android:minSdkVersion="28"
-        android:targetSdkVersion="29" />
-
     <application
         android:icon="@drawable/ic_device_extras"
         android:label="@string/device_extras_title"
@@ -71,11 +67,11 @@
         <!-- DeviceExtras -->
         <activity
             android:name=".DeviceExtrasActivity"
+            android:exported="true"
             android:label="@string/device_extras_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
-
             <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_device_extras" />
@@ -90,6 +86,7 @@
         <!-- Panel Settings Activity -->
         <activity
             android:name=".panelsettings.PanelSettingsActivity"
+            android:excludeFromRecents="true"
             android:exported="true"
             android:label="@string/panel_modes_title"
             android:screenOrientation="portrait">
@@ -102,6 +99,8 @@
         <!-- Touch Gesture Settings Activity -->
         <activity
             android:name=".touch.TouchscreenGestureSettings"
+            android:excludeFromRecents="true"
+            android:exported="true"
             android:label="@string/touchscreen_gesture_settings_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -120,6 +119,7 @@
         <!-- Kcal Settings Activity -->
         <activity
             android:name=".kcal.KcalSettingsActivity"
+            android:excludeFromRecents="true"
             android:exported="true"
             android:label="@string/kcal_settings_title"
             android:screenOrientation="portrait">
