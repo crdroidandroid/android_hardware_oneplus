@@ -359,17 +359,9 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
             int32_t vendorCode = 0;
             FingerprintAcquiredInfo result =
                     VendorAcquiredFilter(msg->data.acquired.acquired_info, &vendorCode);
-            if (result == FingerprintAcquiredInfo::ACQUIRED_VENDOR && vendorCode == 0) {
-                // We don't want to inform frameworks about that.
-                ALOGD("onAcquired: Finger down");
-            } else if (result == FingerprintAcquiredInfo::ACQUIRED_VENDOR && vendorCode == 1) {
-                // We don't want to inform frameworks about that.
-                ALOGD("onAcquired: Finger up");
-            } else {
-                ALOGD("onAcquired(%d)", result);
-                if (!thisPtr->mClientCallback->onAcquired(devId, result, vendorCode).isOk()) {
-                    ALOGE("failed to invoke fingerprint onAcquired callback");
-                }
+            ALOGD("onAcquired(%d)", result);
+            if (!thisPtr->mClientCallback->onAcquired(devId, result, vendorCode).isOk()) {
+                ALOGE("failed to invoke fingerprint onAcquired callback");
             }
         } break;
         case FINGERPRINT_TEMPLATE_ENROLLING:
