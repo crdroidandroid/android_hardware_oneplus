@@ -1,5 +1,7 @@
 package android.util;
 
+import android.content.ContentResolver;
+import android.os.SystemProperties;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -416,5 +418,17 @@ public final class OpFeatures {
             }
         }
         return true;
+    }
+
+    private static int getThemeMode() {
+        return Integer.parseInt(SystemProperties.get("persist.sys.theme", "0"));
+    }
+
+    public static boolean isWhiteModeOn(ContentResolver contentResolver) {
+        return getThemeMode() == 1;
+    }
+
+    public static boolean isBlackModeOn(ContentResolver contentResolver) {
+        return getThemeMode() == 2;
     }
 }
