@@ -71,10 +71,38 @@
         android:key="cpu"
         android:title="@string/cpu_title">
 
+        <org.lineageos.oneplus.DeviceExtras.preferences.CPUBigMaxFreqPreference
+            android:key="cpu_bigmaxfreq"
+            android:title="@string/cpu_bigmaxfreq_title"
+            android:summary="@string/cpu_bigmaxfreq_summary" />
+
+        <Preference
+            android:key="cpu_bigmaxfreq_info"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/cpu_bigmaxfreq_warning"
+            android:persistent="false" />
+    </PreferenceCategory>
+
+    <!-- Start of GPU Category -->
+    <PreferenceCategory
+        android:key="gpu"
+        android:title="@string/gpu_title">
+
         <org.lineageos.oneplus.DeviceExtras.preferences.AdrenoGPUBoostPreference
             android:key="gpu_boost"
             android:title="@string/gpu_boost_title"
             android:summary="@string/gpu_boost_summary" />
+
+        <org.lineageos.oneplus.DeviceExtras.preferences.AdrenoGPUMaxFreqPreference
+            android:key="gpu_maxfreq"
+            android:title="@string/gpu_maxfreq_title"
+            android:summary="@string/gpu_maxfreq_summary" />
+
+        <Preference
+            android:key="gpu_maxfreq_info"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/gpu_maxfreq_warning"
+            android:persistent="false" />
 
         <SwitchPreference
             android:key="gpu_throttling"

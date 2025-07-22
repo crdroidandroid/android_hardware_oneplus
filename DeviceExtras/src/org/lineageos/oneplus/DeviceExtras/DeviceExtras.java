@@ -73,10 +73,17 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_CATEGORY_AUDIO = "audio";
 
     public static final String KEY_CATEGORY_CPU = "cpu";
+    public static final String KEY_CPU_BIG_MAX_FREQ = "cpu_bigmaxfreq";
+    public static final String KEY_CPU_BIG_MAX_FREQ_INFO = "cpu_bigmaxfreq_info";
+    public static final String KEY_CATEGORY_GPU = "gpu";
     public static final String KEY_GPU_BOOST_AMOUNT = "gpu_boost";
+    public static final String KEY_GPU_MAX_FREQ = "gpu_maxfreq";
+    public static final String KEY_GPU_MAX_FREQ_INFO = "gpu_maxfreq_info";
     public static final String KEY_GPU_THROTTLING_SWITCH = "gpu_throttling";
     public static final String KEY_TOUCHBOOST_SWITCH = "touchboost";
+    private CPUBigMaxFreqPreference mCPUBigMaxFreq;
     private AdrenoGPUBoostPreference mGPUBoostAmount;
+    private AdrenoGPUMaxFreqPreference mGPUMaxFreq;
     private static TwoStatePreference mGPUThrottlingModeSwitch;
     private static TwoStatePreference mTouchBoostModeSwitch;
 
@@ -265,8 +272,27 @@ public class DeviceExtras extends PreferenceFragment
 
         boolean cpuCategory = false;
 
+        // CPU big cluster frequency limiting
+        cpuCategory = cpuCategory | isFeatureSupported(context, R.bool.config_deviceSupportsCPUBigMaxFreq);
+        if (isFeatureSupported(context, R.bool.config_deviceSupportsCPUBigMaxFreq)) {
+            mCPUBigMaxFreq = (CPUBigMaxFreqPreference) findPreference(KEY_CPU_BIG_MAX_FREQ);
+            if (mCPUBigMaxFreq != null) {
+                mCPUBigMaxFreq.setEnabled(CPUBigMaxFreqPreference.isSupported(getContext()));
+            }
+        }
+        else {
+           findPreference(KEY_CPU_BIG_MAX_FREQ).setVisible(false);
+           findPreference(KEY_CPU_BIG_MAX_FREQ_INFO).setVisible(false);
+        }
+
+        if (!cpuCategory) {
+            getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_CPU));
+        }
+
+        boolean gpuCategory = false;
+
         // GPU Boost
-        cpuCategory = cpuCategory | isFeatureSupported(context, R.bool.config_deviceSupportsGPUBoost);
+        gpuCategory = gpuCategory | isFeatureSupported(context, R.bool.config_deviceSupportsGPUBoost);
         if (isFeatureSupported(context, R.bool.config_deviceSupportsGPUBoost)) {
             mGPUBoostAmount = (AdrenoGPUBoostPreference) findPreference(KEY_GPU_BOOST_AMOUNT);
             if (mGPUBoostAmount != null) {
@@ -277,8 +303,21 @@ public class DeviceExtras extends PreferenceFragment
            findPreference(KEY_GPU_BOOST_AMOUNT).setVisible(false);
         }
 
+        // GPU max frequency limiting
+        gpuCategory = gpuCategory | isFeatureSupported(context, R.bool.config_deviceSupportsGPUMaxFreq);
+        if (isFeatureSupported(context, R.bool.config_deviceSupportsGPUMaxFreq)) {
+            mGPUMaxFreq = (AdrenoGPUMaxFreqPreference) findPreference(KEY_GPU_MAX_FREQ);
+            if (mGPUMaxFreq != null) {
+                mGPUMaxFreq.setEnabled(AdrenoGPUMaxFreqPreference.isSupported(getContext()));
+            }
+        }
+        else {
+           findPreference(KEY_GPU_MAX_FREQ).setVisible(false);
+           findPreference(KEY_GPU_MAX_FREQ_INFO).setVisible(false);
+        }
+
         // GPU Throttling
-        cpuCategory = cpuCategory | isFeatureSupported(context, R.bool.config_deviceSupportsGPUThrottling);
+        gpuCategory = gpuCategory | isFeatureSupported(context, R.bool.config_deviceSupportsGPUThrottling);
         if (isFeatureSupported(context, R.bool.config_deviceSupportsGPUThrottling)) {
             mGPUThrottlingModeSwitch = (TwoStatePreference) findPreference(KEY_GPU_THROTTLING_SWITCH);
             mGPUThrottlingModeSwitch.setEnabled(GPUThrottlingModeSwitch.isSupported(this.getContext()));
@@ -288,8 +327,8 @@ public class DeviceExtras extends PreferenceFragment
            findPreference(KEY_GPU_THROTTLING_SWITCH).setVisible(false);
         }
 
-        if (!cpuCategory) {
-            getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_CPU));
+        if (!gpuCategory) {
+            getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_GPU));
         }
 
         boolean filesystemCategory = false;

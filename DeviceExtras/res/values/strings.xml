@@ -61,10 +61,9 @@
 
     <!-- CPU -->
     <string name="cpu_title">CPU</string>
-    <string name="gpu_boost_title">Adreno Boost value</string>
-    <string name="gpu_boost_summary">Boost Adreno GPU frequencies more aggressively under load</string>
-    <string name="gpu_throttling_title">Adreno GPU thermal throttling</string>
-    <string name="gpu_throttling_summary">Allow lowering GPU frequencies to reduce temperatures</string>
+    <string name="cpu_bigmaxfreq_title">Big cluster maximum frequency</string>
+    <string name="cpu_bigmaxfreq_summary">Highest clock speed the high-performance cores can use</string>
+    <string name="cpu_bigmaxfreq_warning">Actual maximum frequency steps may differ from slider value</string>
 
     <!-- Display -->
     <string name="display_title">Display</string>
@@ -101,7 +100,7 @@
     <string name="fsync_summary">fsync off/on</string>
     <string name="fsync_warning">Disabling fsync can speed up performance at the risk of potential data loss in the event of a system crash</string>
 
-     <!-- FPS Info -->
+    <!-- FPS Info -->
     <string name="fps_title">Measured FPS</string>
     <string name="fps_info_title">FPS overlay</string>
     <string name="fps_info_summary">Show overlay with current frames per second</string>
@@ -129,6 +128,16 @@
     <string name="fps_info_position_center_center">Center</string>
     <string name="fps_info_position_center_right">Center right</string>
     <string name="fps_info_text_size_title">Text size</string>
+
+    <!-- GPU -->
+    <string name="gpu_title">GPU</string>
+    <string name="gpu_boost_title">Adreno Boost value</string>
+    <string name="gpu_boost_summary">Boost Adreno GPU frequencies more aggressively under load</string>
+    <string name="gpu_maxfreq_title">Max GPU frequency</string>
+    <string name="gpu_maxfreq_summary">Highest clock speed the Adreno GPU can use</string>
+    <string name="gpu_maxfreq_warning">Actual maximum frequency may differ from slider value depending on kernel</string>
+    <string name="gpu_throttling_title">Adreno GPU thermal throttling</string>
+    <string name="gpu_throttling_summary">Allow lowering GPU frequencies to reduce temperatures</string>
 
     <!-- Power -->
     <string name="category_power">Power</string>
