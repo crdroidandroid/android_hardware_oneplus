@@ -26,7 +26,7 @@
         <item>60000</item>
     </integer-array>
     <integer name="auto_hbm_threshold_preference_interval">1</integer>
-    <string name="auto_hbm_threshold_preference_default">20000</string>
+    <string name="auto_hbm_threshold_preference_default" translatable="false">20000</string>
 
     <!-- Adreno Boost integers (default, min, max) -->
     <integer-array name="gpu_boost_preference_array">

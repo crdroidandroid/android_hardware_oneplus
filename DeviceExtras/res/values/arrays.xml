@@ -173,7 +173,7 @@
     </string-array>
 
     <!-- Screen off Gestures -->
-    <string-array name="touchscreen_gesture_action_entries">
+    <string-array name="touchscreen_gesture_action_entries" translatable="false">
         <item>@string/touchscreen_gesture_action_do_nothing</item>
         <item>@string/touchscreen_gesture_action_flashlight</item>
         <item>@string/touchscreen_gesture_action_camera</item>
@@ -198,7 +198,7 @@
         <item>@string/touchscreen_gesture_action_google_maps</item>
         <item>@string/touchscreen_gesture_action_google_search</item>
     </string-array>
-    <string-array name="touchscreen_gesture_action_values">
+    <string-array name="touchscreen_gesture_action_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
