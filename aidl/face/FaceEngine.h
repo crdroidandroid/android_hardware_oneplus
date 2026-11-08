@@ -63,7 +63,15 @@ class FaceEngine {
 
   private:
     bool loadSymbols();
+    bool initLicenseLocked(const char* license);
     bool initLocked();
+
+    // The SDK license calls are one-shot per process: a second call reports a bogus rejection
+    // even when the license is valid. Remember the outcome so retries stay truthful.
+    enum class LicenseState { NONE, OK, REJECTED };
+    LicenseState mLicenseState = LicenseState::NONE;
+    int mLicenseResult = 0;
+    int mLicenseSnpeResult = 0;
 
     static char* sCmdline;
     static size_t sCmdlineSize;

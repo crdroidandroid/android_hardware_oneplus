@@ -203,17 +203,27 @@ bool FaceEngine::init() {
     return withStockCmdline([this] { return initLocked(); });
 }
 
+bool FaceEngine::initLicenseLocked(const char* license) {
+    if (mLicenseState != LicenseState::NONE) return mLicenseState == LicenseState::OK;
+
+    mLicenseResult = initLicense(license);
+    mLicenseSnpeResult = initLicenseSnpe(license);
+    if (mLicenseResult != 0 || mLicenseSnpeResult != 0) {
+        LOG(ERROR) << "License rejected: " << mLicenseResult << ", " << mLicenseSnpeResult;
+        mLicenseState = LicenseState::REJECTED;
+        return false;
+    }
+
+    mLicenseState = LicenseState::OK;
+    return true;
+}
+
 bool FaceEngine::initLocked() {
     Models models;
     std::string license;
     if (!models.open() || !models.read("res/raw/st_license_1_1.lic", &license)) return false;
 
-    int ret = initLicense(license.c_str());
-    int retSnpe = initLicenseSnpe(license.c_str());
-    if (ret != 0 || retSnpe != 0) {
-        LOG(ERROR) << "License rejected: " << ret << ", " << retSnpe;
-        return false;
-    }
+    if (!initLicenseLocked(license.c_str())) return false;
 
     std::string detect = models.path("res/raw/st_detect_9_2_0.model");
     std::string align = models.path("res/raw/st_align_occlusion_1_6_4.model");
@@ -221,17 +231,31 @@ bool FaceEngine::initLocked() {
     std::string verify = models.path("res/raw/st_verify_snpe_3_100_4.model");
     std::string liveness = models.path("res/raw/st_liveness_snpe_7_93_0.model");
     if (detect.empty() || align.empty() || ocular.empty() || verify.empty() || liveness.empty()) {
+        LOG(ERROR) << "Failed to extract ST models from resources";
         return false;
     }
 
+    int ret = 0;
     if ((ret = createDetector(&mDetector, detect.c_str(), align.c_str(),
-                              CV_DETECT_RESIZE_427W | CV_DETECT_106_POINTS)) ||
-        (ret = createDetector(&mDetector640, detect.c_str(), align.c_str(),
-                              CV_DETECT_RESIZE_640W | CV_DETECT_106_POINTS)) ||
-        (ret = createOcular(&mOcular, ocular.c_str(), align.c_str())) ||
-        (ret = createVerify(&mVerify, verify.c_str())) ||
-        (ret = createHackness(&mHackness, liveness.c_str()))) {
-        LOG(ERROR) << "Failed to create ST handles: " << ret;
+                              CV_DETECT_RESIZE_427W | CV_DETECT_106_POINTS))) {
+        LOG(ERROR) << "Failed to create detector: " << ret;
+        return false;
+    }
+    if ((ret = createDetector(&mDetector640, detect.c_str(), align.c_str(),
+                              CV_DETECT_RESIZE_640W | CV_DETECT_106_POINTS))) {
+        LOG(ERROR) << "Failed to create detector (640w): " << ret;
+        return false;
+    }
+    if ((ret = createOcular(&mOcular, ocular.c_str(), align.c_str()))) {
+        LOG(ERROR) << "Failed to create ocular: " << ret;
+        return false;
+    }
+    if ((ret = createVerify(&mVerify, verify.c_str()))) {
+        LOG(ERROR) << "Failed to create verify handle: " << ret;
+        return false;
+    }
+    if ((ret = createHackness(&mHackness, liveness.c_str()))) {
+        LOG(ERROR) << "Failed to create liveness handle: " << ret;
         return false;
     }
     return true;
